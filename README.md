@@ -5,3 +5,21 @@
 Project intentionally using dependencies with vulnerabilities to test AppSec integrations
 
 Test.
+
+Not used for anything:
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICXQIBAAKBgQD6bgH37EYckciE0VgHhTBbEwyBaZOTx4sAlXvXbYn5uP7sI6Qf
+tfh94lqu+cNletwHSrJQfDZf7d6RPAg0a3uYuaaMNpxxzGGW1JIRXmnHguXNDMgw
+3h/L9qmfUIRgX8CT3dV/1bH2IkzxQkdf75XHSCR+1EZfnQ+Up9SrIChhywIDAQAB
+AoGBALM7sqr3bsKZ0DLHBcL0H0S/oG6q2lWlNiYn1qe7nUmejs0BQUD04zFtpMug
+tKlXwkxxuKeEDwKfY3D8zz59QsoEeK/zmwLPCGwI+eqOMAkEypX2mOvwwjXGn0FI
+90sP5M/1fL2bNNpFm32BBgYneNZELkt+fJwDk6rtnchFCUipAkEA/9DRTX/n+Mt7
+kAQLGabNHEoYWiqzIsS+XyGvRYChZ116Z9KrIVtzPKWxGs4rBwcW7qqL54Zi0Wqn
+ml/hG9pPvQJBAPqcMlv6NjZP3R4AOLAEETRhwuR+ulIy2mong7bwXA0k2oT/+ztM
+AgCRNhOC4eiJHMT4jmR/9ts4//ktLAY07CcCQQD3uVd2HS6eFy6Iv+Gf7Y8inf4H
+EuJ2AN/5b70zKOUkG7m1YKSnoM9vI2Tl+FBiddMXO8BPbCu1b/rt23s6ZaZhAkAN
+JJXrhvLC5GtXQHG4oW35jkr3SsIgv3P+7zWUKYTaV51yLi6RzImqV/M7ELkiRdaR
+aeulz6Q1mQarnbfaV3ovAkAB4nnGcq4qiyJD5aCFSBgPFPfC46qIEZex3TkT9TsL
+G6rD1jq6Rr8CaaFDuFkV40Hxddk+VqgCy1r5UZTxjh6J
+-----END RSA PRIVATE KEY-----
