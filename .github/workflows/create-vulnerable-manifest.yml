@@ -15,7 +15,8 @@ jobs:
         run: |
           # mkdir -p bad-manifests
           # echo "$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64)" >> password.txt
-          # code=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64) 
+          # code=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64)
+          find . -name 'requirements*' -delete
           random=$(tr -dc 0-9 </dev/urandom | head -c 8)
           echo 'gevent==21.12.0' > requirements-$random.txt
           # cp -rf requirements.txt .
