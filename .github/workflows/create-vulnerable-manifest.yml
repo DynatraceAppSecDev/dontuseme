@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --local user.email "test@github.com"
           git config --local user.name "GitHub Action test"
-          git add ./bad-manifests/
+          git add requirements.txt
           git commit -m "Test bad manifest"
       - name: push changes
         uses: ad-m/github-push-action@master
