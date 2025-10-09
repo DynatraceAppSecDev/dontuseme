@@ -16,14 +16,15 @@ jobs:
           # mkdir -p bad-manifests
           # echo "$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64)" >> password.txt
           # code=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64) 
-          # code=$(tr -dc 0-9 </dev/urandom | head -c 30)
-          echo 'gevent==21.12.0' > requirements.txt
+          random=$(tr -dc 0-9 </dev/urandom | head -c 8)
+          echo 'gevent==21.12.0' > requirements-$(random).txt
           # cp -rf requirements.txt .
       - name: commit changes
         run: |
           git config --local user.email "test@github.com"
           git config --local user.name "GitHub Action test"
-          git add requirements.txt
+          # git add requirements.txt
+          git add 'requirements*'
           git commit -m "Test bad manifest"
       - name: push changes
         uses: ad-m/github-push-action@master
