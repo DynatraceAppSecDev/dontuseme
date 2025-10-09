@@ -1,0 +1,37 @@
+name: Create vulnerable manifest
+on:
+  workflow_dispatch:
+
+jobs:
+  update_secret:
+    name: Update bad manifest
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Update bad manifest
+        run: |
+          mkdir -p bad-manifests
+          # echo "$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64)" >> password.txt
+          # code=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64) 
+          # code=$(tr -dc 0-9 </dev/urandom | head -c 30)
+          echo '
+                "dependencies": {
+                  "next": ">=15.4.7"
+                }' >> package-lock.json
+          cp -rf package-lock.json ./bad-manifests/
+      - name: commit changes
+        run: |
+          git config --local user.email "test@github.com"
+          git config --local user.name "GitHub Action test"
+          git add ./bad-manifests/
+          git commit -m "Test bad manifest"
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+        
+            
