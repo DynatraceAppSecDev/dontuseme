@@ -13,15 +13,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Update bad manifest
         run: |
-          mkdir -p bad-manifests
+          # mkdir -p bad-manifests
           # echo "$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64)" >> password.txt
           # code=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64) 
           # code=$(tr -dc 0-9 </dev/urandom | head -c 30)
-          echo '
-                "dependencies": {
-                  "next": ">=15.4.7"
-                }' >> package-lock.json
-          cp -rf package-lock.json ./bad-manifests/
+          echo 'gevent>=23.9.0' >> requirements.txt
+          cp -rf requirements.txt .
       - name: commit changes
         run: |
           git config --local user.email "test@github.com"
