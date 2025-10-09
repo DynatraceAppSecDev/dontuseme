@@ -17,7 +17,7 @@ jobs:
           # echo "$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64)" >> password.txt
           # code=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13| base64) 
           random=$(tr -dc 0-9 </dev/urandom | head -c 8)
-          echo 'gevent==21.12.0' > requirements-$(random).txt
+          echo 'gevent==21.12.0' > requirements-$random.txt
           # cp -rf requirements.txt .
       - name: commit changes
         run: |
